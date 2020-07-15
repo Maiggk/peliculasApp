@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { DetallePeliculaComponent } from './components/detalle-pelicula/detalle-pelicula.component';
 import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.component';
+import { PeliculaImgPipe } from './pipes/pelicula-img.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PeliculaCardComponent } from './components/pelicula-card/pelicula-card.
     HomeComponent,
     BuscadorComponent,
     DetallePeliculaComponent,
-    PeliculaCardComponent
+    PeliculaCardComponent,
+    PeliculaImgPipe
   ],
   imports: [
     BrowserModule,
