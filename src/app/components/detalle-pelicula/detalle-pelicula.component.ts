@@ -11,7 +11,7 @@ import { PeliculasService } from 'src/app/services/peliculas.service';
 export class DetallePeliculaComponent implements OnInit {
 
   idPelicula:string = "";
-  pelicula:Object;
+  pelicula:Object = {};
 
   constructor(private _ps:PeliculasService,
               private activatedRoute:ActivatedRoute,
