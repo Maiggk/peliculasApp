@@ -1,0 +1,23 @@
+<div class="container mt-3 text-center">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Novedades en Películas</h1>
+      <p class="lead">Encuentra los mejores titulos que hay actualmente en cartelera y preparate para la diversion.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 bg-primary" >
+      <app-pelicula-card *ngFor="let peliculaPadre of peliculas;let i = index;"
+                          (peliculaSeleccionada)="verDetalle($event)"
+                         [peliculaHijo]="peliculaPadre">
+      </app-pelicula-card>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 bg-success mt-5" >
+      <app-pelicula-card *ngFor="let peliculaPadre of peliculasInfantiles;let i = index;"
+                         (peliculaSeleccionada)="verDetalle($event)"
+                         [peliculaHijo]="peliculaPadre">
+      </app-pelicula-card>
+    </div>
+  </div>
+</div>

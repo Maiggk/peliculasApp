@@ -1,0 +1,16 @@
+<style>
+  a.custom-card,
+  a.custom-card:hover {
+    color: inherit;
+  }
+</style>
+
+<div class="mb-4">
+  <div class="card">
+    <img src="https://image.tmdb.org/t/p/w300/{{ peliculaHijo['poster_path'] }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ peliculaHijo['title'] }}</h5>
+    </div>
+    <p><button type="button" class="custom-card btn btn-primary" (click)="emitirEvento(peliculaHijo.id)">Detalles</button></p>
+  </div>
+</div>

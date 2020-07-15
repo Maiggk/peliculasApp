@@ -1,0 +1,9 @@
+<h2 class="mt-3">Resultados:</h2>
+<hr>
+<br>
+<div class="row row-cols-1 row-cols-md-3" >
+  <app-pelicula-card *ngFor="let peliculaPadre of peliculas;let i = index;"
+                      (peliculaSeleccionada)="verDetalle($event)"
+                     [peliculaHijo]="peliculaPadre">
+  </app-pelicula-card>
+</div>
