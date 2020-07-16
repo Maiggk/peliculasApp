@@ -42,8 +42,8 @@ export class PeliculasService {
   }
 
   getInfantiles(){
-    let url = `${ this.urlMovieDb }/discover/movie?api_key=${ this.apiKey }&language=es-MX&region=MX&sort_by=popularity.desc&
-                                    certification_country=US&certification.gte=G&certification.lte=G&include_adult=false&include_video=false`;
+    let url = `${ this.urlMovieDb }/discover/movie?api_key=${ this.apiKey }&language=es-MX&region=MX&
+                                    certification_country=US&certification.lte=G&sort_by=popularity.desc&include_adult=false&include_video=false`;
     return this.http.get(url)
                     .pipe( map( res => {
                       return res['results']

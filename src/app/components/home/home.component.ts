@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
     this._ps.getEnCines().subscribe(
       (resp:any[]) => {
         // this.peliculas = resp;
-        for(let i=0;i<5;i++){
+        for(let i=0;i<6;i++){
           this.peliculas.push(resp[i]);
         }
 
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
     this._ps.getInfantiles()
             .subscribe( resp => {
               // this.peliculasInfantiles = resp;
-              for(let i=0;i<5;i++){
+              for(let i=0;i<6;i++){
                 this.peliculasInfantiles.push(resp[i]);
               }
               console.log(this.peliculasInfantiles);
