@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styles: []
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
@@ -27,11 +27,7 @@ export class HomeComponent implements OnInit {
 
     this._ps.getInfantiles()
             .subscribe( resp => {
-              // this.peliculasInfantiles = resp;
-              for(let i=0;i<6;i++){
-                this.peliculasInfantiles.push(resp[i]);
-              }
-              console.log(this.peliculasInfantiles);
+              this.peliculasInfantiles = resp;
             });
   }
 

@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PeliculaImgPipe implements PipeTransform {
 
-  transform(pelicula: any): any {
+  transform(pelicula: Object = {}): any {
 
 		let url = "https://image.tmdb.org/t/p/w300/";
 
