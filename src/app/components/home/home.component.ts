@@ -18,11 +18,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this._ps.getEnCines().subscribe(
       (resp:any[]) => {
-        // this.peliculas = resp;
         for(let i=0;i<6;i++){
           this.peliculas.push(resp[i]);
         }
-
       });
 
     this._ps.getInfantiles()

@@ -19,10 +19,10 @@ export class BuscadorComponent implements OnInit {
                         .subscribe( params => {
                           this.texto = params['texto'];
                         });
-                        console.log(this.texto);
+
       this._ps.getPeliculaKeyWord(this.texto)
               .subscribe( results => {
-                  console.log(results);
+
                   this.peliculas= results;
               });
   }
