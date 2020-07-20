@@ -10,11 +10,11 @@ export class PeliculaImgPipe implements PipeTransform {
 
 		let url = "https://image.tmdb.org/t/p/w300/";
 
-	  if(pelicula.poster_path){
-      return url + pelicula.poster_path;
+	  if(pelicula['poster_path']){
+      return url + pelicula['poster_path'];
 	  }else{
-		  if(pelicula.backdrop_path){
-			return url + pelicula.poster_path;
+		  if(pelicula['backdrop_path']){
+			return url + pelicula['backdrop_path'];
 		  }else{
 			return "assets/img/no-image.jpg";
 		  }

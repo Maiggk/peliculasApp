@@ -17,9 +17,11 @@ export class NavbarComponent implements OnInit {
     if(event!=null){
       if (event.key === "Enter") {
         event.preventDefault();
-        this.router.navigate(['/buscador',texto]);
+        if(texto.length == 0){  return; }
+        this.router.navigate(['/buscador',encodeURI(texto)]);
       }
     }else{
+      if(texto.length == 0){  return; }
       this.router.navigate(['/buscador',encodeURI(texto)]);
     }
   }

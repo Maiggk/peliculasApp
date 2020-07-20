@@ -28,7 +28,7 @@
           <div class="row">
             <div class="col-md-12 div-pic-1 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculas[0] | peliculaImg) +')' }"
-                 ng-click="verDetalle(peliculas[0].id)">
+                 (click)="verDetalle(peliculas[0]['id'])">
 
             </div>
           </div>
@@ -36,11 +36,11 @@
           <div class="row">
             <div class="col-sm-6 div-pic-2 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculas[1] | peliculaImg) + ')' }"
-                 (click)="verDetalle(peliculas[1].id)">
+                 (click)="verDetalle(peliculas[1]['id'])">
             </div>
             <div class="col-sm-6 div-pic-2 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculas[2] | peliculaImg) + ')' }"
-                 (click)="verDetalle(peliculas[2].id)">
+                 (click)="verDetalle(peliculas[2]['id'])">
             </div>
           </div>
       </div>
@@ -48,17 +48,18 @@
           <div class="row">
             <div class="col-sm-6 div-pic-2 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculas[3] | peliculaImg) + ')' }"
-                 (click)="verDetalle(peliculas[3].id)">
+                 (click)="verDetalle(peliculas[3]['id'])">
             </div>
             <div class="col-sm-6 div-pic-2 puntero"
-                 [ngStyle]="{'background-image': 'url('+ (peliculas[4] | peliculaImg) + ')' }">
+                 [ngStyle]="{'background-image': 'url('+ (peliculas[4] | peliculaImg) + ')' }"
+                 (click)="verDetalle(peliculas[4]['id'])">
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-12 div-pic-1 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculas[5] | peliculaImg) +')' }"
-                 (click)="verDetalle(peliculas[5].id)">
+                 (click)="verDetalle(peliculas[5]['id'])">
 
             </div>
           </div>
@@ -74,7 +75,7 @@
           <div class="row">
             <div class="col-md-12 div-pic-1 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[0] | peliculaImg) +')' }"
-                 (click)="verDetalle(peliculasInfantiles[0].id)">
+                 (click)="verDetalle(peliculasInfantiles[0]['id'])">
 
             </div>
           </div>
@@ -82,11 +83,11 @@
           <div class="row">
             <div class="col-sm-6 div-pic-2 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[1] | peliculaImg) + ')' }"
-                 (click)="verDetalle(peliculasInfantiles[1].id)">
+                 (click)="verDetalle(peliculasInfantiles[1]['id'])">
             </div>
             <div class="col-sm-6 div-pic-2 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[2] | peliculaImg) + ')' }"
-                 (click)="verDetalle(peliculasInfantiles[2].id)">
+                 (click)="verDetalle(peliculasInfantiles[2]['id'])">
             </div>
           </div>
       </div>
@@ -94,18 +95,18 @@
           <div class="row">
             <div class="col-sm-6 div-pic-2 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[3] | peliculaImg) + ')' }"
-                 (click)="verDetalle(peliculasInfantiles[3].id)">
+                 (click)="verDetalle(peliculasInfantiles[3]['id'])">
             </div>
             <div class="col-sm-6 div-pic-2 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[4] | peliculaImg) + ')' }"
-                 (click)="verDetalle(peliculasInfantiles[4].id)">
+                 (click)="verDetalle(peliculasInfantiles[4]['id'])">
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-12 div-pic-1 puntero"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[5] | peliculaImg) +')' }"
-                 (click)="verDetalle(peliculasInfantiles[5].id)">
+                 (click)="verDetalle(peliculasInfantiles[5]['id'])">
 
             </div>
           </div>
