@@ -13,12 +13,10 @@ export class HomeComponent implements OnInit {
   peliculasPopulares:Pelicula[] = [];
   peliculasInfantiles:Pelicula[] = [];
 
-  constructor(private _ps:PeliculasService, private router:Router) { }
+  constructor(private _ps:PeliculasService, private router:Router) {
 
-  ngOnInit() {
     this._ps.getEnCines().subscribe(
       (resp:Pelicula[]) => {
-        console.log(resp);
         for(let i=0;i<6;i++){
           this.peliculas.push(resp[i]);
         }
@@ -28,6 +26,10 @@ export class HomeComponent implements OnInit {
             .subscribe( (resp:Pelicula[]) => {
               this.peliculasInfantiles = resp;
             });
+
+   }
+
+  ngOnInit() {
   }
 
   verDetalle( idPelicula:number){

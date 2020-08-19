@@ -23,23 +23,26 @@
 
     <h3>En Cartelera</h3>
     <hr>
-    <div class="row animated fadeIn" *ngIf="peliculas">
+    <div class="row animated fadeIn">
       <div class="col-md-6">
           <div class="row">
             <div class="col-md-12 div-pic-1 puntero"
-                 [ngStyle]="{'background-image': 'url('+ (peliculas[0] | peliculaImg) +')' }"
+                 *ngIf="peliculas[0]"
+                 [ngStyle]="{'background-image': 'url('+ (peliculas[0] | peliculaImg:true) +')' }"
                  (click)="verDetalle(peliculas[0]['id'])">
-                <p class="pic-titulo">{{ peliculas[0]['title'] }}</p>
+                <p class="pic-titulo">{{ peliculas[0]['title']}}</p>
             </div>
           </div>
 
           <div class="row">
             <div class="col-sm-6 div-pic-2 puntero"
+                 *ngIf="peliculas[1]"
                  [ngStyle]="{'background-image': 'url('+ (peliculas[1] | peliculaImg) + ')' }"
                  (click)="verDetalle(peliculas[1]['id'])">
                  <p class="pic-titulo">{{ peliculas[1]['title'] }}</p>
             </div>
             <div class="col-sm-6 div-pic-2 puntero"
+                 *ngIf="peliculas[2]"
                  [ngStyle]="{'background-image': 'url('+ (peliculas[2] | peliculaImg) + ')' }"
                  (click)="verDetalle(peliculas[2]['id'])">
                  <p class="pic-titulo">{{ peliculas[2]['title'] }}</p>
@@ -49,11 +52,13 @@
       <div class="col-md-6">
           <div class="row">
             <div class="col-sm-6 div-pic-2 puntero"
+                 *ngIf="peliculas[3]"
                  [ngStyle]="{'background-image': 'url('+ (peliculas[3] | peliculaImg) + ')' }"
                  (click)="verDetalle(peliculas[3]['id'])">
                  <p class="pic-titulo">{{ peliculas[3]['title'] }}</p>
             </div>
             <div class="col-sm-6 div-pic-2 puntero"
+                 *ngIf="peliculas[4]"
                  [ngStyle]="{'background-image': 'url('+ (peliculas[4] | peliculaImg) + ')' }"
                  (click)="verDetalle(peliculas[4]['id'])">
                  <p class="pic-titulo">{{ peliculas[4]['title'] }}</p>
@@ -62,7 +67,8 @@
 
           <div class="row">
             <div class="col-md-12 div-pic-1 puntero"
-                 [ngStyle]="{'background-image': 'url('+ (peliculas[5] | peliculaImg) +')' }"
+                 *ngIf="peliculas[5]"
+                 [ngStyle]="{'background-image': 'url('+ (peliculas[5] | peliculaImg:true) +')' }"
                  (click)="verDetalle(peliculas[5]['id'])">
                  <p class="pic-titulo">{{ peliculas[5]['title'] }}</p>
             </div>
@@ -78,7 +84,8 @@
       <div class="col-md-6">
           <div class="row">
             <div class="col-md-12 div-pic-1 puntero"
-                 [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[0] | peliculaImg) +')' }"
+                 *ngIf="peliculasInfantiles[0]"
+                 [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[0] | peliculaImg:true) +')' }"
                  (click)="verDetalle(peliculasInfantiles[0]['id'])">
                  <p class="pic-titulo">{{ peliculasInfantiles[0]['title'] }}</p>
             </div>
@@ -86,11 +93,13 @@
 
           <div class="row">
             <div class="col-sm-6 div-pic-2 puntero"
+                 *ngIf="peliculasInfantiles[1]"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[1] | peliculaImg) + ')' }"
                  (click)="verDetalle(peliculasInfantiles[1]['id'])">
                  <p class="pic-titulo">{{ peliculasInfantiles[1]['title'] }}</p>
             </div>
             <div class="col-sm-6 div-pic-2 puntero"
+                 *ngIf="peliculasInfantiles[2]"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[2] | peliculaImg) + ')' }"
                  (click)="verDetalle(peliculasInfantiles[2]['id'])">
                  <p class="pic-titulo">{{ peliculasInfantiles[2]['title'] }}</p>
@@ -100,11 +109,13 @@
       <div class="col-md-6">
           <div class="row">
             <div class="col-sm-6 div-pic-2 puntero"
+                 *ngIf="peliculasInfantiles[3]"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[3] | peliculaImg) + ')' }"
                  (click)="verDetalle(peliculasInfantiles[3]['id'])">
                  <p class="pic-titulo">{{ peliculasInfantiles[3]['title'] }}</p>
             </div>
             <div class="col-sm-6 div-pic-2 puntero"
+                 *ngIf="peliculasInfantiles[4]"
                  [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[4] | peliculaImg) + ')' }"
                  (click)="verDetalle(peliculasInfantiles[4]['id'])">
                  <p class="pic-titulo">{{ peliculasInfantiles[4]['title'] }}</p>
@@ -113,7 +124,8 @@
 
           <div class="row">
             <div class="col-md-12 div-pic-1 puntero"
-                 [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[5] | peliculaImg) +')' }"
+                 *ngIf="peliculasInfantiles[5]"
+                 [ngStyle]="{'background-image': 'url('+ (peliculasInfantiles[5] | peliculaImg:true) +')' }"
                  (click)="verDetalle(peliculasInfantiles[5]['id'])">
                  <p class="pic-titulo">{{ peliculasInfantiles[5]['title'] }}</p>
             </div>
